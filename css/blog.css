@@ -1,0 +1,393 @@
+/*  Start Variables  */
+
+:root{
+    --main-color:#fec955;
+    --main-lo:#02246a;
+}
+
+/*  End Variables  */
+
+/*  Start Gloable Rules  */
+
+*{
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    padding:0 15px;
+    margin:0 auto;
+}
+
+/*  Small Screen  */
+
+@media (min-width:768px) { 
+    .container{
+        width:750px;
+    }
+ }
+/*  Mediam Screen  */
+
+@media (min-width:992px) { 
+    .container{
+        width:970px;
+    }
+ }
+/*  Larg Screen  */
+
+@media (min-width:1200px) { 
+    .container{
+        width:1170px;
+    }
+}
+
+/*  End Gloable Rules  */
+
+/*  Start Header  */
+
+header{
+    background-color: var(--main-lo);
+    padding:20px 0;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header .container > h3{
+    color:var(--main-color);
+    font-size: 30px;
+    margin-top:25px;
+}
+@media (max-width:767px) {
+    header .container {
+        padding-top:10px;
+    }
+    header .container > h3{
+        padding-top: 30px;
+    }
+}
+header .link{
+    display:flex;
+    align-items:center;
+}
+
+header .link .alwan{
+    color:white;
+    padding:40px 20px 0;
+}
+@media (min-width:767px) {
+    header .link .alwan {
+        display:none;
+    }
+}
+header .link ul{
+    display:flex;
+    align-items:center;
+}
+
+
+header .link ul li a{
+    display:block;
+    padding:10px 20px 0;
+    text-decoration:none;
+    color:white;
+    font-weight: bold;
+}
+header .link .form i{
+    color:white;
+}
+
+header .link .form i:hover{
+    color:var(--main-color);
+}
+
+header .link ul li a.active,
+header .link ul li a:hover{
+    text-decoration: underline !important;
+    color:var(--main-color);
+}
+
+header .link .form{
+    margin-left:40px;
+    cursor: pointer;
+    font-size:18px;
+    position:relative;
+}
+
+header .link .form i{
+    font-weight:bold;
+    position:absolute;
+    top:50%;
+    transform:translateY(50%);
+}
+
+@media (max-width:767px) {
+    header .link .alwan {
+        display:flex;
+        background-color: var(--main-lo);
+    }
+
+    header .link .form,
+    header .link ul{
+        display:none;
+    }
+    header .link .alwan:hover + ul{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        left:0;
+        width:100%;
+        background-color: rgb(0 0 0 / 70%);
+        padding-bottom:20px;
+        margin-top:30px;
+    }
+}
+/*  End Header  */
+
+/* Start Seo  */
+
+.alwan{
+    text-align: center;
+    font-size:30px;
+    background-color: var(--main-color);
+    padding:50px 0;
+    color:var(--main-lo);
+}
+
+/* End Seo  */
+
+/* Start go  */
+
+.go {
+    
+}
+
+.go .group{
+    display:grid;
+    grid-template-columns: repeat( auto-fill , minmax( 300px , 1fr) );
+    gap:30px;
+    padding:100px 0;
+}
+
+.go .group .box{
+    text-align: center;
+}
+
+.go .group .box img{
+    max-width:100%;
+    height:50%;
+}
+
+.go .group .box h2{
+    color:var(--main-lo);
+    margin:40px auto;
+    font-size:30px;
+}
+
+.go .group button{
+    background:none;
+    color:var(--main-color);
+    border:2px solid var(--main-color);
+    padding:20px 40px;
+    transition: 0.9s;
+    cursor: pointer;
+}
+
+.go .group button:hover{
+    background-color: var(--main-lo);
+}
+
+/*  End go  */
+
+
+
+/*  Start footer  */
+footer{
+    padding:60px 0 150px 0;
+    background-color: var(--main-lo);
+    color:white;
+    position:relative;
+}
+
+footer .container{
+    display:grid;
+    grid-template-columns: repeat( auto-fill , minmax( 250px , 1fr ) );
+    gap:20px;
+}
+
+
+footer .info h2{
+    border-bottom:3px solid var(--main-color);
+    width:fit-content;
+    margin:30px 0;
+}
+
+footer .info ul li{
+    margin:10px 0;
+    cursor:pointer;
+}
+
+footer .info ul li:hover{
+    color:var(--main-color);
+}
+
+footer > .info h1{
+    
+}
+
+footer > .info p{
+
+}
+
+footer .info .wel{
+    display:flex;
+    margin-top:40px;
+}
+@media (max-width:767px) {
+    footer{
+        margin-top:10px;
+    }
+    footer .container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+        text-align:center;
+    }
+    footer .info h2{
+        margin:30px auto;
+    }
+    footer .info .wel{
+        justify-content: center;
+    }
+}
+footer .info .wel li{
+    margin:5px;
+    background-color: white;
+    color: var(--main-lo);
+    width:40px;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:23px;
+    border-radius:50%;
+    transition: 0.3s;
+}
+
+footer .info .wel li:hover{
+    color:#fec955;
+}
+
+footer .sub{
+    position:absolute;
+    bottom:-100px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    margin-bottom:200px;
+    flex-wrap:wrap;
+}
+
+footer .sub h3{
+    margin:12px 50px 0 0;
+    text-transform:uppercase;
+}
+
+footer .sub form input[type = "email"]{
+    padding:10px 20px;
+    border-radius:10px;
+    width:300px;
+    flex:1;
+    border:none;
+}
+@media (max-width:767px) {
+    footer .sub{
+        text-align:center;
+    }
+
+    footer .sub h3{
+        margin:10px auto;
+    }
+    footer .sub form input[type = "email"]{
+        margin:10px auto;
+    }
+    footer .info:last-of-type{
+        margin-bottom:90px;
+    }
+}
+footer .sub form input[type = "submit"]{
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    flex-basis:200px;
+    background-color: var(--main-color);
+    color:white;
+    text-transform:uppercase;
+    cursor:pointer;
+    margin-left:5px;
+    transition:0.9s;
+}
+footer .sub form input[type = "submit"]:hover{
+    background-color: black;
+}
+
+footer .sub form input[type = "email"]:focus{
+    outline:none;
+}
+
+footer .copy{
+    position:absolute;
+    bottom:0;
+    margin-top:60px;
+    left:50%;
+    transform: translateX(-50%);
+    width:700px;
+    padding-top:20px;
+    text-align: center;
+}
+
+footer .copy::after{
+    content:'';
+    position:absolute;
+    width:700px;
+    height:1px;
+    background-color: white;
+    top:0;
+    left:-20px;
+}
+
+@media (max-width:767px) {
+    footer .copy{
+        width:350px;
+        margin-bottom:10px;
+    }
+    
+    footer .copy::after{
+        width:350px;
+        left:10px;
+    }
+}
+
+
+/*  End footer  */
